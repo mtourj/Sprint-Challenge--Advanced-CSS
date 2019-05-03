@@ -3,10 +3,20 @@
     border-bottom: @weight @style @color;
 }
 
-.button (@bgColor: white, @color: black) {
+.button (@bgColor: white, @color: black, @width: 10rem, @height: 4rem, @fontSize: 2rem) {
     background-color: @bgColor;
     color: @color;
     border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: @width;
+    height: @height;
+
+    text-decoration: none;
+    font-size: @fontSize;
 
     &:hover {
         background-color: @color;
@@ -16,9 +26,13 @@
 
 .fade (@keyframe, @duration: 2s, @delay: 0s){
     //-webkit-transition: opacity @duration ease-in-out @delay;
-    animation: @duration ease-out @delay 1 @keyframe;
+    animation: @duration ease-in-out @delay 1 @keyframe;
 }
 
 .fadeOnHover (@duration: 0.7s, @delay: 0.5s){
     transition: opacity @duration ease-in-out @delay;
+}
+
+.slideFromTop (){
+    
 }

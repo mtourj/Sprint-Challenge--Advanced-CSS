@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link href="css/index.css" rel="stylesheet" />
+    <script src="js/index.js"></script>
 
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -87,7 +88,7 @@
             the planet Earth.
           </p>
 
-          <a href="#" class="btn">
+          <a href="#" id="signupButton" class="btn">
             Sign Up
           </a>
         </div>
@@ -101,5 +102,21 @@
         <p>Copyright SpaceWalkers 2018</p>
       </footer>
     </div>
+
+    <div id="signup">
+        <div class="overlay"></div>
+        <form>
+          <div class="formRow">
+              <h2>Sign up to our magazine!</h2>
+              <a href="#" id="closeButton"><img src="./img/btn-close.svg"></a>
+          </div>
+          
+          <p>Enter your e-mail address below to receive a free magazine by e-mail every week!</p>
+          <div class="formRow nonresponsive">
+            <input placeholder="email@example.com" type="email" name="email"></input>
+            <a href="#signup" id="signupBtn">Sign Up</a>
+          </div>
+        </form>
+      </div>
   </body>
 </html>

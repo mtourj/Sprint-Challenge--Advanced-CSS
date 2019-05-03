@@ -9,6 +9,15 @@
     }
 }
 
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -18,6 +27,8 @@
     top: 0;
     width: 100%;
     height: auto;
+
+    .fade(slideFromTop, 1s, 0.5s);
 
     opacity: @nav-opacity;
     
