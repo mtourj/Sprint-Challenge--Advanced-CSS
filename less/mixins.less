@@ -24,15 +24,11 @@
     }
 }
 
-.fade (@keyframe, @duration: 2s, @delay: 0s){
-    //-webkit-transition: opacity @duration ease-in-out @delay;
-    animation: @duration ease-in-out @delay 1 @keyframe;
+.fade (@keyframe, @duration: 2s, @delay: 0s, @type: ease-in-out){
+    animation: @duration @type @delay 1 @keyframe;
+    animation-fill-mode: forwards;
 }
 
-.fadeOnHover (@duration: 0.7s, @delay: 0.5s){
-    transition: opacity @duration ease-in-out @delay;
-}
-
-.slideFromTop (){
-    
+.fadeOnHover (@duration: 0.7s, @delay: 0.5s, @type: ease-in-out){
+    transition: opacity @duration @type @delay;
 }

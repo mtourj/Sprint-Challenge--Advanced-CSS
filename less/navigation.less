@@ -11,7 +11,7 @@
 
 @keyframes slideFromTop {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-20rem);
     }
     100% {
         transform: translateY(0);
@@ -19,6 +19,8 @@
 }
 
 .navigation {
+    transform: translateY(-20rem);
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,11 +29,10 @@
     top: 0;
     width: 100%;
     height: auto;
-
-    .fade(slideFromTop, 1s, 0.5s);
-
     opacity: @nav-opacity;
     
+    .fade(slideFromTop, 1s, 0.5s, ease-out);
+
     padding: 0.8rem 0;
 
     .fadeOnHover();
