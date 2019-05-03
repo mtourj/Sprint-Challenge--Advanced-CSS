@@ -1,1 +1,15 @@
 // Mixins Here
+.borderBottom (@color: black, @style: solid, @weight: 1px){
+    border-bottom: @weight @style @color;
+}
+
+.button (@bgColor: white, @color: black) {
+    background-color: @bgColor;
+    color: @color;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: @color;
+        color: @bgColor;
+    }
+}
