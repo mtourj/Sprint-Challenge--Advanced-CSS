@@ -1,1 +1,67 @@
-// Navigation code here
+@nav-opacity: 0.9;
+
+@keyframes fadeIn {
+    0% {
+        opacity: @nav-opacity;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-20rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.navigation {
+    transform: translateY(-20rem);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: @nav-bg;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: @nav-opacity;
+    
+    .fade(slideFromTop, 1s, 0.5s, ease-out);
+
+    padding: 0.8rem 0;
+
+    .fadeOnHover();
+
+    &:hover {
+        opacity: 1;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+
+        a {
+            padding: 0 1.3rem;
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: @nav-font;
+
+            &:hover {
+                color: black;
+            }
+        }
+
+        @media @mobile {
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
+    }
+
+    .borderBottom(@nav-border);
+}
